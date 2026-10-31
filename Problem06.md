@@ -41,6 +41,25 @@ public int countDependencyGroups(int n, int[][] dependencies){
 
 #### Constraints
 + $1 \leq n \leq 10^5$
+
+# Problem 06: Software Dependency Cycles (Tarjan's Algorithm)
+
+## Problem Description
+A software company maintains `n` modules numbered `0` to `n - 1`. Directed dependencies `[a, b]` indicate that module `a` depends on module `b`. 
+
+A group of modules forms a **circular dependency group** if every module in the group can reach every other module by following dependency links. 
+
+Our goal is to count the total number of circular dependency groups, which corresponds to finding the number of **Strongly Connected Components (SCCs)** using **Tarjan's Algorithm**.
+
+---
+
+## Examples
+
+### Example 1
+```text
+Input: n = 5, dependencies = [[0,1], [1,2], [2,0], [2,3], [3,4]]
+Output: 3
+Explanation: The 3 groups are {0, 1, 2}, {3}, and {4}.
 + $0 \leq dependencies.length \leq 2 \cdot 10^5$
 + $0 \leq dependencies[i][0], dependencies[i][1] < n$
 
