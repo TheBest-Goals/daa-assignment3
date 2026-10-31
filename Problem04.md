@@ -6,17 +6,21 @@ Save your solution to [src/Problem04.java](src/Problem04.java).
 
 Add report to [REPORT.md](REPORT.md).
 
-# Problem 04: Graph Traversal & Shortest Path
+# Problem 04: Min Cost to Connect All Points
 
-## Description
-Given a graph with $N$ nodes and $M$ edges, this problem asks to find paths, reachability, or minimum distances starting from a given source node $S$.
+## Problem Description
+You are given an array `points` representing integer coordinates of points on a 2D-plane, where `points[i] = [xi, yi]`.
+
+The cost of connecting two points `[xi, yi]` and `[xj, yj]` is the **Manhattan distance** between them:
+$$\text{Cost} = \vert{}x_i - x_j\vert{} + \vert{}y_i - y_j\vert{}$$
+
+Return the minimum cost to make all points connected such that there is exactly one simple path between any pair of points (Minimum Spanning Tree).
 
 ---
 
-## Example Input / Output
+## Examples
 
-**Sample Input:**
+### Example 1
 ```text
-n = 4, m = 2
-edges = [[1, 2], [1, 3]]
-start_node = 1
+Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+Output: 20
