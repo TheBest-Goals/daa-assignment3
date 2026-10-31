@@ -45,3 +45,24 @@ public int countDependencyGroups(int n, int[][] dependencies){
 + $0 \leq dependencies[i][0], dependencies[i][1] < n$
 
 Good Luck!
+
+
+
+# Problem 05: Software Dependency Cycles (Kosaraju's Algorithm)
+
+## Problem Description
+A software company maintains a collection of software modules numbered from `0` to `n - 1`. Some modules depend on others. A directed dependency `[a, b]` means module `a` depends on module `b`.
+
+A group of modules forms a **circular dependency group** if every module in the group can reach every other module by following dependency links. 
+
+The goal is to determine the total number of circular dependency groups, which corresponds to finding the number of **Strongly Connected Components (SCCs)** in a directed graph.
+
+---
+
+## Examples
+
+### Example 1
+```text
+Input: n = 5, dependencies = [[0,1], [1,2], [2,0], [2,3], [3,4]]
+Output: 3
+Explanation: The 3 groups are {0, 1, 2}, {3}, and {4}.
